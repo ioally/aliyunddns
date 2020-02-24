@@ -1,11 +1,11 @@
 # aliyunddns
 
 ## 说明 
-- 项目基于Spring Boot
 - 使用阿里云DNS Java SDK 实现的阿里云ddns服务
+- 项目基于Spring Boot, 使用Spring Scheduled定时任务实现, 支持cron表达式配置频率
 - 默认端口 8080
 
-## 配置说明
+## 配置
 ```
 spring:
   application:
