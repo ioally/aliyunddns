@@ -1,12 +1,3 @@
-# aliyunddns
-
-## 说明 
-- 项目基于Spring Boot
-- 使用阿里云DNS Java SDK 实现的阿里云ddns服务
-- 默认端口 8080
-
-## 配置说明
-```
 spring:
   application:
     name: aliyunddns
@@ -25,4 +16,3 @@ ddns:
 logging:
   level:
     root: info # 日志等级，默认即可
-```
