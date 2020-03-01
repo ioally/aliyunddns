@@ -7,6 +7,8 @@ WORKDIR /aliyunddns
 COPY config/ ./config
 ADD https://github.com/cloudtry/aliyunddns/releases/download/v1.0.0/aliyunddns-1.0.0.jar ./aliyunddns.jar
 
+ENV TZ Asia/Shanghai
+
 VOLUME /aliyunddns/config
 VOLUME /aliyunddns/logs
 
