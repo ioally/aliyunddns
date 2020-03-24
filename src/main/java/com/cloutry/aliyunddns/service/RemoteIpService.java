@@ -83,8 +83,16 @@ public class RemoteIpService implements Supplier<String> {
             throw new NoSuchElementException(String.format("未找到iframe标签，请检查配置[%s]的地址可用性。", "ddns.route.queryUrl"));
         }
         queryIpUrl = iframe.get(0).attr("src").toLowerCase();
+        if (!queryIpUrl.startsWith("http")) {
+            if (queryIpUrl.startsWith("//")) {
+                queryIpUrl = "http:" + queryIpUrl;
+            } else {
+                queryIpUrl = "http://" + queryIpUrl;
+            }
+        } else {
+            queryIpUrl = queryIpUrl.replace("https", "http");
+        }
         // https会导致请求失败
-        queryIpUrl = queryIpUrl.replace("https", "http");
         LOGGER.info("获取成功, 查询ip地址的url: {}", queryIpUrl);
         return Feign.builder()
                 .logger(FEIGN_LOGGER)
