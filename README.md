@@ -32,6 +32,13 @@ logging:
     root: info # 日志等级，默认即可
 ```
 
+### 关于阿里云AccessKey需要注意
+> 1. 为了阿里云账号安全，不建议使用主账号的AccessKey，建议创建使用RAM子用户AccessKey
+> 
+> 2. 如果使用RAM子用户AccessKey，需要给新的子账号分配以下权限，否则会因为没有足够的权限导致更新失败
+>     - AliyunDNSFullAccess （管理云解析(DNS)的权限）
+>     - AliyunDomainFullAccess （管理域名服务的权限）
+
 ## Dokcer使用说明
 
 1. 拉取镜像
