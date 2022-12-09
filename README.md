@@ -19,7 +19,7 @@ spring:
     name: aliyunddns
 ddns:
   remote:
-    queryUrl: https://www.ip138.com
+    queryUrl: http://checkip.amazonaws.com/
   aliyun:
     regionId: cn-hangzhou #机房节点id，默认杭州，无需更改
     accessKeyId: xxxxxxx # 需要在阿里云控制台获取
