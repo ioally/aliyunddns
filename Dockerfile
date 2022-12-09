@@ -5,7 +5,7 @@ RUN mkdir /aliyunddns /aliyunddns/logs
 WORKDIR /aliyunddns
 
 COPY config/ ./config
-ADD https://github.com/cloudtry/aliyunddns/releases/download/v1.0.4/aliyunddns-1.0.4.jar ./aliyunddns.jar
+ADD https://github.com/cloudtry/aliyunddns/releases/download/v1.0.5/aliyunddns-1.0.5.jar ./aliyunddns.jar
 
 ENV TZ Asia/Shanghai
 
