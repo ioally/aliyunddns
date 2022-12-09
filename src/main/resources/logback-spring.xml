@@ -23,7 +23,7 @@
         </encoder>
     </appender>
 
-    <!-- Appender to log to file -->​
+    <!-- Appender to log to file -->
     <appender name="flatfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/${springAppName}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">

@@ -1,6 +1,6 @@
 package com.cloutry.aliyunddns.api.init;
 
-import com.cloutry.aliyunddns.api.QueryIpUrlApi;
+import com.cloutry.aliyunddns.api.RemoteQueryIpApi;
 import feign.Feign;
 import feign.Logger;
 import feign.slf4j.Slf4jLogger;
@@ -17,10 +17,8 @@ public class QueryIpConfig {
     private String masterUrl;
 
     @Bean
-    public QueryIpUrlApi queryIpUrlApi() {
-        return Feign.builder()
-                .logger(LOGGER)
-                .target(QueryIpUrlApi.class, masterUrl);
+    public RemoteQueryIpApi queryIpUrlApi() {
+        return Feign.builder().logger(LOGGER).target(RemoteQueryIpApi.class, masterUrl);
     }
 
 }

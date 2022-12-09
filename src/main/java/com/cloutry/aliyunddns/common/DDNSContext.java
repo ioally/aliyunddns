@@ -1,7 +1,6 @@
 package com.cloutry.aliyunddns.common;
 
 public abstract class DDNSContext {
-
     /**
      * 本地回环地址
      */
