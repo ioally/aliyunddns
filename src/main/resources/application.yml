@@ -3,12 +3,12 @@ spring:
     name: aliyunddns
 ddns:
   remote:
-    queryUrl: https://www.ip138.com
+    queryUrl: http://checkip.amazonaws.com/
   aliyun:
     regionId: cn-hangzhou #机房节点id，默认杭州，无需更改
     accessKeyId: xxxxxxx # 需要在阿里云控制台获取
     accessKeySecret: xxxxxxxx # 需要在阿里云控制台获取
-    domainName: demo.com # 购买域名
+    domainName: demo.com # 购买的域名
     subDomains: '@,www' # 子域名支持配置多个多个子域名使用英文逗号分隔，支持使用 @ 或 www 配置顶级域名
   task:
     updateRecordCron: '0 0/1 * * * ?' # 查询ip地址的频率, cron表达式, 默认每分钟
